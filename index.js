@@ -1,13 +1,10 @@
-var fs = require('fs');
 var util = require ('util');
-
 var Spec = require('mocha/lib/reporters/spec');
 
 exports = module.exports = CovSummary;
 
 function CovSummary(runner) {
     Spec.call(this, runner);
-
     runner.on('end', report);
 }
 
